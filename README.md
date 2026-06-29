@@ -201,6 +201,7 @@ From raw CSV files to an interactive **Streamlit web app** and a full **Power BI
 │   ├── Cities_Temperatures.png
 │   ├── Greenhouse_Gases.png
 │   ├── Natural_Disasters.png
+│   ├── Crops&Nutrients.png
 │
 ├── 📂 presentation/
 │   └── ClimateScope_DEPI.pdf            # 📄 Project Presentation
@@ -306,8 +307,13 @@ openpyxl>=3.1.0
 
 ---
 
-### 🌧️ Natural Disasters Analysis
+### 🌧️ World Disasters Analysis
 ![Rainfall](screenshots/Natural_Disasters.png)
+
+---
+
+### 🌾 Crops & Nutrients Correlation
+![Rainfall](screenshots/Crops&Nutrients.png)
 
 ---
 
