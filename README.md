@@ -336,17 +336,7 @@ openpyxl>=3.1.0
 
 ---
 
-## ⚡ Challenges & Solutions
 
-| # | 🔴 Challenge | ✅ Solution |
-|---|-------------|------------|
-| 1 | **Inconsistent formats** across datasets — different date formats, column names, and measurement units | Built a unified preprocessing pipeline in `02_data_cleaning.ipynb` with standardized column mapping and unit conversion |
-| 2 | **Missing values** in historical records, especially for under-monitored regions and early decades | Applied domain-appropriate strategies: forward-fill for time series gaps, regional mean imputation for spatial gaps |
-| 3 | **Merging datasets** with different time granularities (monthly vs. annual) | Resampled all time series to a common annual resolution before merging on a shared key |
-| 4 | **Large file performance** causing slow notebook execution | Optimized dtypes using `pandas.astype()`, used chunked CSV reading, and filtered columns early in the pipeline |
-| 5 | **Power BI data model** relationships across five datasets with overlapping keys | Designed a clean star schema with a single `dim_date` table and fact tables per indicator |
-| 6 | **Streamlit rendering speed** with heavy multi-chart pages | Used `@st.cache_data` on all data-loading functions; lazy-loaded charts per tab selection |
-| 7 | **Correlation analysis** across indicators measured in different scales | Applied Min-Max normalization before cross-indicator comparison and correlation matrix generation |
 
 ---
 
@@ -372,17 +362,17 @@ openpyxl>=3.1.0
 
 <div align="center">
 
-| 👤 Name | 🎯 Role | 🔗 GitHub |
-|---------|---------|----------|
-| **[ Name 1 ]** | Project Lead & Data Engineer | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
-| **[ Name 2 ]** | Power BI Developer & Data Modeler | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
-| **[ Name 3 ]** | Streamlit App Developer | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
-| **[ Name 4 ]** | Data Cleaning & EDA Specialist | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
-| **[ Name 5 ]** | Visualization & Documentation | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
+| 👤 Name | 🔗 GitHub |
+|---------|----------|
+| **[ Sulaf Mohammad AbdElHameed Judah ]** | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
+| **[ Ahmed Mohammed Mohammed Refat Ghieth ]** | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
+| **[ Hager Mohamed Al Sayed Ibrahim ]** | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
+| **[ Basmala Mahmoud Hamza Sheba ]** | [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
+| **[ Mohamed Ragab Abdelwanes Abdelkader ]** |  [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/username) |
 
 <br/>
 
-> 🇪🇬 Built with passion for the **Digital Egypt Pioneers Initiative — رواد مصر** | Data Analysis Track
+> Built with passion for the **Digital Egypt Pioneers Initiative** | Data Analysis Track
 
 </div>
 
@@ -410,7 +400,7 @@ openpyxl>=3.1.0
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&text=ClimateScope%20%7C%20DEPI%202024%E2%80%932025&fontSize=18&fontColor=ffffff&fontAlignY=65" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&text=ClimateScope%20%7C%20DEPI%202025%E2%80%932026&fontSize=18&fontColor=ffffff&fontAlignY=65" width="100%"/>
 
 <br/>
 
