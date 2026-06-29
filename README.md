@@ -208,8 +208,10 @@ From raw CSV files to an interactive **Streamlit web app** and a full **Power BI
 │
 ├── 📋 Documentation.pdf                 # 📄 Project Documentation PDF
 │
-├── 🐍 app.py                            # ⭐ Main Streamlit application
-└── 📖 README.md                         # Project documentation (you are here)
+├── 📂 full_project_streamlit_analysis/
+│   └── 🐍 app.py            # ⭐ Main Streamlit application
+│
+└── 📖 README.md             # Project documentation (you are here)
 ```
 
 ---
