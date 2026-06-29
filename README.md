@@ -60,8 +60,9 @@ We investigated five core climate dimensions:
 | 🌡️ | **Global Temperatures** | Historical trends, anomalies, regional warming rates |
 | 🌧️ | **Rainfall & Humidity** | Precipitation shifts, seasonal variance, drought risk |
 | 🏭 | **Greenhouse Gas Emissions** | CO₂, CH₄, N₂O levels by country and sector |
-| 💧 | **Water Resources & Quality** | Availability indices, quality metrics, depletion trends |
-| 🌾 | **Crops & Nutrients** | Agricultural impact, soil nutrient ratios, yield correlation |
+| 💧 | **Water Resources & Quality** | Availability indices, depletion trends |
+| 🌾 | **Crops & Nutrients** | Agricultural impact, nutrient ratios, yield correlation |
+| 🌪️ | **Natural Disasters** | Disasters frequency, total deaths, affected areas |
 
 From raw CSV files to an interactive **Streamlit web app** and a full **Power BI dashboard**, ClimateScope delivers data-driven insights that are both accessible and analytically rigorous.
 
@@ -180,44 +181,35 @@ From raw CSV files to an interactive **Streamlit web app** and a full **Power BI
 │
 ├── 📂 data/
 │   ├── 📂 raw/                          # 🔵 Original unprocessed datasets
-│   │   ├── global_temperatures.csv
-│   │   ├── greenhouse_gases.csv
-│   │   ├── rainfall_humidity.csv
 │   │   ├── water_resources.csv
-│   │   └── crops_nutrients.csv
+│   │   └── crops.csv
 │   │
 │   └── 📂 cleaned/                      # 🟢 Post-processing clean datasets
 │       ├── temperatures_clean.csv
-│       ├── emissions_clean.csv
-│       ├── rainfall_clean.csv
-│       ├── water_clean.csv
-│       └── crops_clean.csv
+│       ├── emissions_cleaned.csv
+│       ├── water_resources_cleaned.csv
+│       └── crops_cleaned.csv
 │
 ├── 📂 notebooks/                        # 📓 Jupyter analysis notebooks
-│   ├── 01_data_collection.ipynb         #    Data sourcing & initial inspection
-│   ├── 02_data_cleaning.ipynb           #    Full preprocessing pipeline
-│   ├── 03_EDA_temperature.ipynb         #    Temperature exploratory analysis
-│   ├── 04_EDA_emissions.ipynb           #    Greenhouse gas analysis
-│   ├── 05_EDA_water.ipynb               #    Water resources analysis
-│   ├── 06_EDA_rainfall.ipynb            #    Rainfall & humidity analysis
-│   └── 07_EDA_crops.ipynb               #    Crops & nutrients analysis
+│   ├── water_resources_cleaning.ipynb
+│   ├── crops_cleaning.ipynb
+│   ├── climate_analysis_cleaning.ipynb
 │
 ├── 📂 dashboard/
 │   └── ClimateScope.pbix                # 📊 Power BI dashboard file
 │
 ├── 📂 screenshots/                      # 🖼️ App & dashboard screenshots
-│   ├── overview.png
-│   ├── temperature.png
-│   ├── emissions.png
-│   ├── water.png
-│   ├── rainfall.png
-│   └── crops.png
+│   ├── Temperatures&Water.png
+│   ├── Cities_Temperatures.png
+│   ├── Greenhouse_Gases.png
+│   ├── Natural_Disasters.png
 │
 ├── 📂 presentation/
-│   └── ClimateScope_DEPI.pdf            # 📄 Project documentation PDF
+│   └── ClimateScope_DEPI.pdf            # 📄 Project Presentation
+│
+├── 📋 Documentation.pdf                 # 📄 Project Documentation PDF
 │
 ├── 🐍 app.py                            # ⭐ Main Streamlit application
-├── 📋 requirements.txt                  # Python dependencies list
 └── 📖 README.md                         # Project documentation (you are here)
 ```
 
@@ -240,7 +232,7 @@ Make sure you have the following installed on your machine:
 
 **Step 1 — Clone the repository**
 ```bash
-git clone https://github.com/YOUR-ORG/ClimateScope.git
+git clone https://github.com/ItcProjects-R4/ONL4_DAT2_S2_PROJECT5
 cd ClimateScope
 ```
 
@@ -302,36 +294,26 @@ openpyxl>=3.1.0
 <div align="center">
 
 ### 🏠 Dashboard Overview
-![Dashboard Overview](screenshots/overview.png)
+![Dashboard Overview](screenshots/Temperatures&Water.png)
 
 ---
 
 ### 🌡️ Global Temperature Trends
-![Temperature](screenshots/temperature.png)
+![Temperature](screenshots/Cities_Temperatures.png)
 
 ---
 
 ### 🏭 Greenhouse Gas Emissions
-![Emissions](screenshots/emissions.png)
+![Emissions](screenshots/Greenhouse_Gases.png)
 
 ---
 
-### 💧 Water Resources & Quality
-![Water](screenshots/water.png)
+### 🌧️ Natural Disasters Analysis
+![Rainfall](screenshots/Natural_Disasters.png)
 
 ---
-
-### 🌧️ Rainfall & Humidity Analysis
-![Rainfall](screenshots/rainfall.png)
-
----
-
-### 🌾 Crops & Nutrients Correlation
-![Crops](screenshots/crops.png)
 
 </div>
-
-> 📌 *Replace screenshot paths with your actual image files in the `/screenshots/` folder.*
 
 ---
 
@@ -342,16 +324,11 @@ openpyxl>=3.1.0
 | `app.py` | Core Streamlit application — renders all interactive visualizations, filters, and analysis pages |
 | `data/raw/` | Original datasets downloaded from public repositories (NASA GISS, World Bank, FAOSTAT, etc.) |
 | `data/cleaned/` | Fully processed datasets after null handling, type casting, outlier treatment, and standardization |
-| `notebooks/01_data_collection.ipynb` | Data sourcing strategy, API/CSV ingestion, and initial structure inspection |
-| `notebooks/02_data_cleaning.ipynb` | Complete preprocessing pipeline — missing values, duplicates, unit normalization, merging logic |
-| `notebooks/03_EDA_temperature.ipynb` | Temperature anomaly detection, trend regression, regional comparison and heatmaps |
-| `notebooks/04_EDA_emissions.ipynb` | GHG emission trends, country-level analysis, and correlation with temperature rise |
-| `notebooks/05_EDA_water.ipynb` | Water availability and quality index analysis across time and regions |
-| `notebooks/06_EDA_rainfall.ipynb` | Precipitation pattern analysis, seasonality decomposition, and humidity tracking |
-| `notebooks/07_EDA_crops.ipynb` | Agricultural yield impact, N–P–K nutrient ratios, and climate-crop correlation |
-| `dashboard/ClimateScope.pbix` | Power BI file with star-schema data model, DAX measures, and 6 interactive report pages |
-| `requirements.txt` | Pinned list of all Python dependencies for reproducible environment setup |
-| `presentation/ClimateScope_DEPI.pdf` | Full project documentation PDF including methodology, findings, and team info |
+| `notebooks/water_resources_cleaning.ipynb` | Data sourcing strategy, API/CSV ingestion, and initial structure inspection |
+| `notebooks/crops_cleaning.ipynb` | Complete preprocessing pipeline — missing values, duplicates, unit normalization, merging logic |
+| `notebooks/climate_analysis_cleaning.ipynb` | Temperature anomaly detection, trend regression, regional comparison and heatmaps |
+| `dashboard/ClimateScope.pbix` | Power BI file with star-schema data model, DAX measures, and 4 interactive report pages |
+| `Documentation.pdf` | Full project documentation PDF including methodology, findings, and team info |
 
 ---
 
