@@ -62,7 +62,7 @@ We investigated five core climate dimensions:
 | 🏭 | **Greenhouse Gas Emissions** | CO₂, CH₄, N₂O levels by country and sector |
 | 💧 | **Water Resources & Quality** | Availability indices, depletion trends |
 | 🌾 | **Crops & Nutrients** | Agricultural impact, nutrient ratios, yield correlation |
-| 🌪️ | **Natural Disasters** | Disasters frequency, total deaths, affected areas |
+| 🌪️ | **World Disasters** | Disasters frequency, total deaths, affected areas |
 
 From raw CSV files to an interactive **Streamlit web app** and a full **Power BI dashboard**, ClimateScope delivers data-driven insights that are both accessible and analytically rigorous.
 
@@ -122,11 +122,11 @@ From raw CSV files to an interactive **Streamlit web app** and a full **Power BI
 </td>
 <td width="50%">
 
-### 🌧️ Rainfall & Humidity Tracker
-- Seasonal precipitation pattern analysis
-- Regional humidity shift visualization
-- Drought risk indicator mapping
-- Monthly and annual aggregation views
+### 🌪️ World Disasters Analysis
+- Pattern analysis
+- Disasters impact across regions
+- Total deaths caused by disasters
+- Disasters trends
 
 </td>
 </tr>
