@@ -251,7 +251,7 @@ source venv/bin/activate
 
 **Step 3 — Install Python dependencies**
 ```bash
-pip install -r requirements.txt
+pip install streamlit pandas numpy plotly scikit-learn openpyxl
 ```
 
 **Step 4 — Run the Streamlit App**
