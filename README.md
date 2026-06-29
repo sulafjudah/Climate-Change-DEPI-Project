@@ -135,9 +135,7 @@ From raw CSV files to an interactive **Streamlit web app** and a full **Power BI
 
 ### 🏭 Emissions Monitor
 - CO₂, CH₄, and N₂O trend tracking
-- Country-level and sector-level breakdown
-- Emission-to-temperature correlation charts
-- Cumulative vs. per-capita comparisons
+- Emissions through time
 
 </td>
 <td width="50%">
